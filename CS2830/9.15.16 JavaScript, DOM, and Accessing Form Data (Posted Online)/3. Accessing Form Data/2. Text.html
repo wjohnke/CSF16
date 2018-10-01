@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To show you how to collect data from Text Boxes from the form we created in class, how to change the text in text boxes, and how to determine the length of the text in a text box -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_option_value.asp
+        2) http://www.w3schools.com/jsref/jsref_length_string.asp
+        3) http://www.w3schools.com/js/js_output.asp
+        4) https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Elements</title>
+        <script>
+        
+            function getUsername() {
+                var textObject = document.getElementById("user");
+                
+                // We can inspect our DOM object using console.dir()
+                console.dir(textObject);
+                
+                console.log(textObject.value);
+            }
+            
+            function setUsername() {
+                document.getElementById("user").value = "Sally";
+            }
+            
+            function checkPassword() {
+                var passwordObject = document.getElementById("password");
+                
+                // How long is the value in #pass?
+                console.log(passwordObject.value.length);
+				
+				// If the pass is shorter than 8 characters, alert
+                if (passwordObject.value.length <= 8) {
+                    alert("Password is too short!");
+                }
+            }
+        
+        </script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            
+            <!-- Text Input -->
+            <div>
+                 <label for="user">Username:</label>
+                <input id="user" type="text" name="username" placeholder="Username">
+            </div>
+            
+            
+            <!-- Password Input -->
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="password">
+            </div>
+            
+            <hr>
+            
+            <button type="button" onclick="getUsername()">Get Username</button>
+            <button type="button" onclick="setUsername()">Set Username</button>
+            <button type="button" onclick="checkPassword()">Check Password</button>
+            
+        </form>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="IntersectionMonitor.jnlp">
+  <information>
+    <title>IntersectionMonitor</title>
+    <vendor>wjohnke</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="IntersectionMonitor.jar" size="8176" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="IntersectionMonitor" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="intersectionmonitor.IntersectionMonitor"  name="IntersectionMonitor" />
+  <update check="always"/>
+</jnlp>

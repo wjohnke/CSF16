@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<title>jQuery Plugin: Colorize Controller</title>
+
+	<style>
+		h1, div, p {
+			height: 150px;
+			border: 1px solid black;
+		}
+	</style>	
+	<script src="jquery-1.11.2.min.js"></script>	
+	<script>
+        // Colorize plugin
+        (function( $ ){
+            $.fn.colorize = function(color) {  
+                return this.css('background-color', color);
+            };
+        })( jQuery );
+
+        // Ready
+        $(function() {
+            $('#red').click(function() {
+                $(".special").colorize('#ffcccc');
+            });
+
+            $('#green').click(function() {
+                $(".special").colorize('#ccffcc');
+            });
+
+            $('#blue').click(function() {
+                $(".special").colorize('#ccccff');
+            });
+        });
+	
+	</script>
+</head>
+<body>
+	<button type="button" id="red">Make Red</button>
+	<button type="button" id="green">Make Green</button>
+	<button type="button" id="blue">Make Blue</button>
+	
+	<h1 class="special">This is a header</h1>
+	<div class="special">This is a div. It is special.</div>
+	<p class="special">This is some text inside of a paragraph.</p>
+	<p>This is some other text in a paragraph that is not special :)</p>
+</body>
+</html>

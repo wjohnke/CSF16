@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on August 30, 2016 -->
+
+<!-- The main purpose is to show you CSS skills by using display inline block, 
+		which can acheive the same function as the previous code, 
+		to put two div's side by side -->
+
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>CSS Columns Inline Block</title>
+        <style>
+            
+            
+            /* Note:  
+            It has been possible for a long time to create a grid of boxes that 
+              fills the browser width and wraps nicely (when the browser is resized), 
+              by using the float property.
+
+            However, the inline-block value of the display property makes this even easier.
+
+            Inline-block elements are like inline elements but they can have a width and a height.  
+            
+            References: 
+            
+            ********** http://www.w3schools.com/css/css_inline-block.asp **********
+            
+            
+            Note: 
+            !! Inline block creates 4px of space inbetween each div 
+            considered as white space, like inbetween words in microsoft word. !!
+            
+            */ 
+            
+            
+            /* Left Physical Width =
+                200px content width
+                + 4px of border
+                -------
+                = 204px
+            */
+            #left {
+                display:inline-block;  /* Note: this is different syntax for inline box */ 
+                width: 200px;
+                height: 250px;
+                border: 2px solid pink;
+            }
+            
+            /* Middle and Right Physical Width =
+                300px content width
+                + 4px of border
+                -------
+                = 304px
+            */
+            #middle, #right {
+                display:inline-block;
+                width: 300px;
+                height: 250px;
+                border: 2px solid purple;
+            }
+            
+            /* Total Physical Width after two = 
+             
+             204px -> left div 
+             304px -> middle div
+           +   4px -> inline block white space
+            ------
+             512px
+
+            */
+            
+            
+            /* Total Physical Width after three = 
+            
+             512px -> first two div
+           + 304px -> width of right div
+           --------
+        	 816px	
+           +   4px -> inline white space 
+           --------
+             820px
+            
+            */
+            
+            #columns {
+                /* 512px for two */
+                /* 820px for three */
+                width: 820px;
+                border: 5px solid powderblue;  
+            }
+            
+            
+            /* Note: Notice here we do not have a clear class */
+        
+        
+        </style>
+    </head>
+    <body>
+        
+        <!-- Note: See what happens if you take this outside div away -->
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+            
+            <!-- add this div later, calculate this div's physical width,
+             then calculate the total width for the columns div (all three inside div's) -->
+            <div id="right">Right</div>
+            
+            <!-- Note: Notice here we do not have to clear the float like in the previous example -->
+        </div>
+    </body>
+</html>

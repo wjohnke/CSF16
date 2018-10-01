@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Created by Mr. Wergeles on October 31, 2016 -->
+<html>
+<head>
+	<title>jQuery UI: Sortable Tabs</title>
+	<style>
+	#favoriteThings li, #notFavoriteThings li {
+		margin: 0 5px 5px 5px;
+		padding: 5px;
+		font-size: 1.2em;
+		width: 300px;
+	}
+	</style>
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+           
+            $('#favoriteThings, #notFavoriteThings').sortable();
+            
+            var $tabs=$('#favoriteThingsTabs').tabs();
+            
+            var $tab_items=$("ul:first li", $tabs).droppable({
+                accept:".connectedSortable li",
+                hoverClass:"ui-state-hover",
+                drop:function(event, ui){
+                    var $item=$(this);
+                    
+                    var $list=$($item.find("a").attr("href")).find(".connectedSortable");
+                    
+                    ui.draggable.hide("slow", function(){
+                       
+                        $tabs.tabs("option", "active", $tab_items.index($item));
+                        
+                        $(this).appendTo($list).show("slow");
+                        
+                    });
+                }
+                
+            });
+            
+        });
+	</script>
+</head>
+<body>
+	<div id="favoriteThingsTabs">
+		<ul>
+			<li><a href="#tab-1">My Favorite Things</a></li>
+			<li><a href="#tab-2">Not my Favorite Things</a></li>
+		</ul>
+		<div id="tab-1">
+			<ul id="favoriteThings" class="connectedSortable ui-helper-reset">
+				<li class="ui-state-default">Raindrops on roses</li>
+				<li class="ui-state-default">Whiskers on kittens</li>
+				<li class="ui-state-default">Bright copper kettles</li>
+				<li class="ui-state-default">Warm woolen mittens</li>
+			</ul>
+		</div>
+		<div id="tab-2">
+			<ul id="notFavoriteThings" class="connectedSortable ui-helper-reset">
+				<li class="ui-state-highlight">When the dog bites</li>
+				<li class="ui-state-highlight">When the bee stings</li>
+				<li class="ui-state-highlight">When I'm feeling sad</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

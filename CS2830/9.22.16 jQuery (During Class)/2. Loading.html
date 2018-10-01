@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on Septebmer 21, 2016 -->
+
+<!-- Main Purpose: To show you how jQuery .ready() works -->
+
+<!-- References: 
+		1) http://www.w3schools.com/jquery/event_ready.asp
+		2) http://api.jquery.com/ready/
+		3) http://www.w3schools.com/jquery/jquery_syntax.asp
+		4) http://www.w3schools.com/jquery/jquery_selectors.asp		
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Loading</title>
+		
+        <script src="jslibs/jquery-2.1.4.min.js"></script>
+        <script> 
+        
+            function pageLoaded() {
+                console.log("body: onload event"); 
+                
+//                var message = document.getElementById("message"); 
+//                
+//                message.innerHTML = "The DOM has loaded"; 
+            }
+            
+            //to just wait for the DOM, we can use jQuery's library called .ready() function
+            // Refernce: http://api.jquery.com/ready/
+            
+            $(document).ready(function() {
+                
+                console.log("jQuery: the DOM is ready");
+                
+                var message = $("#message"); 
+                
+                message.html("jQuery changed this"); 
+            
+            }); 
+            
+        
+        </script>
+    </head> 
+<!--	<body onload = "pageLoaded()">-->
+    <body>
+		<p id="message">Default</p>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To show you an example that ties everything together for the JavaScript we just went over. This shows you how to controll the background with JavasScript without reloading the page -->
+
+<!-- References: 
+		1) http://www.w3schools.com/jsref/prop_style_backgroundimage.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Controlled Background</title>
+        <style>
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-color: #000;
+                background-size: cover;
+            }
+        </style>
+        <script>
+            // The following is a fun example that ties the everything together.
+            function pageLoaded() {
+                var d = new Date();
+                var hours = 20; //d.getHours();
+                var content = document.getElementById("content");
+
+                // From 7 am till 9 am => dawn
+                if(7 <= hours && hours < 9){
+
+                    content.style.backgroundImage = "url(images/dawn.png)";
+                }
+                // From 9am till 6pm => day
+                else if (9 <= hours && hours < 18) {
+                    content.style.backgroundImage = "url(images/day.png)";
+                }
+                // From 6pm till 8pm => dusk
+                else if (18 <= hours && hours < 20) {
+                    content.style.backgroundImage = "url(images/dusk.png)";
+                }
+                // Else night
+                else if(20 <= hours && hours < 7){
+                    content.style.backgroundImage = "url(images/night.png)";
+                } 
+                else {
+                    content.style.backgroundImage = "url(images/obama.jpeg)";
+                }
+            }
+        </script>
+    </head>
+    <body id="content" onload="pageLoaded()">
+    </body>
+</html>

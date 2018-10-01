@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on Septebmer 21, 2016 -->
+
+<!-- Main Purpose: To show you how to create JSON objects in JavaScript, the syntax,
+		and how to convert the JSON object to a string -->
+
+<!-- References:
+		1) http://www.w3schools.com/js/js_objects.asp
+		2) http://www.w3schools.com/json/
+		3) https://en.wikipedia.org/wiki/JSON
+		4) http://www.json.org/
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Objects and JSON</title>
+        
+        <script>
+            
+            //JSON Object w/ 3 key value pairs
+            //Used for sending data
+            var trainer = {
+                name: "Ash",
+                badges: 10,
+                pokemon: ["Pikachu", "Squirtle", "Jigglypuff"]
+            };
+            
+            console.dir(trainer);
+            
+            console.log(trainer.name);
+            
+            console.log(trainer.name + " has" + trainer.badges + " badges");
+            
+            for(var i in trainer.pokemon){
+                console.log(trainer.name + " has a " + trainer.pokemon[i]);
+            }
+            
+            //Create a JSON representation of trainer
+            var trainerJSON=JSON.stringify(trainer);
+            
+            console.log(trainerJSON);
+            
+        </script>
+		
+	</head>
+	<body>
+	</body>
+</html>

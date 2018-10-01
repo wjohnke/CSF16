@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<!--Will Johnke
+  ID: 14253530
+  9/5/2016
+-->
+
+<!--
+Put calculations up here because comments
+in Notepad++ for CSS are acting weird (even with /**/)
+
+Also it looked like the wrapper border was about 10px in the screenshot
+posted, so I set it to that so it looked exactly the same.
+Otherwise, the wrapper border should be 2px
+
+---------------------------------------------------
+			left column width:
+				content: 250px
+				padding *2: 50px
+				border*2: 20px
+				margin*2:20px
+			middle column width:
+				content: 150px
+				padding*2: 50px
+				border*2: 20px
+				margin*2: 20px
+			right column width:
+				padding*2:50px
+				border*2: 20px
+				margin *2: 20px
+				content width unknown
+			-------------------------
+			total = 670px for 3 columns, w/out knowing content width
+							for right column
+			------------
+		
+		column wrapper width:
+				total content width:1000px
+				columns w/out right content width: 670px
+				==330px left for right content
+----------------------------------------------------------				
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Challenge 3</title>
+		<style>
+			#columnWrapper{
+				margin:20px auto;
+				width:1000px;
+				border:10px solid goldenrod;
+				padding:50px;
+				border-radius:100px;
+			}
+		
+			.column{
+				float:left;
+				padding:25px;
+				margin:10px;
+				border:10px double black;
+				border-radius:50px;
+			}
+		
+			#left{
+				
+				width:250px;
+				background-color:forestgreen;
+				
+			}
+			#middle{
+				
+				width:150px;
+				background-color:gold;
+			}
+			#right{
+				
+				width:330px;
+				background-color:tomato;
+			}
+			
+			.header{
+				text-align:center;
+			}
+			
+			.group:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		</style>
+		
+	
+	</head>
+	
+	<body>
+	
+	<div id="columnWrapper" class="group">
+		<h1 class="header">CS2830 Third Challenge</h1>
+		<div id="left" class="column">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Sed pellentesque vitae lorem sit amet convallis. Duis pulvinar
+		scelerisque egestas. Donec sit amet nulla turpis. Cras in arcu sed velit
+		imperdiet tempor. Pellentesque sit amet massa molestie, elementum elit non, 
+		placerat arcu. Mauris pellentesque lorem ut ultrices elementum. Curabitur consectetur, 
+		sem mollis porttitor egestas, nibh ligula luctus urna, et facilisis mi est et urna.
+		Aenean tristique non massa id commodo. Vestibulum nec neque magna. Class aptent taciti 
+		sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+		Suspendisse cursus neque et fringilla congue.
+		</div>
+		
+		<div id="middle" class="column">
+		Pellentesque sem lorem, bibendum non pulvinar at, auctor quis lectus. Ut quis nibh
+		lectus. In vel sagittis nunc, et laoreet augue. Fusce augue dolor, convallis a
+		tortor vitae, accumsan faucibus sapien. Donec aliquam nulla in ante ullamcorper pharetra. 
+		Nullam ac enim felis. Pellentesque id eleifend felis. Nam nisi lectus, auctor vel nulla in, 
+		congue mattis felis. Ut commodo maximus diam, quis varius neque. Integer sit amet mattis turpis. 
+		Phasellus pulvinar eros ac eleifend elementum. Fusce sagittis, turpis a tristique tincidunt, neque 
+		urna consectetur risus, non hendrerit magna elit nec nisi. Integer ultrices aliquet sodales.
+		</div>
+		
+		<div id="right" class="column">
+		Morbi bibendum ac ante vitae efficitur. Aenean eu felis dolor. Suspendisse urna justo, commodo ac 
+		molestie at, scelerisque ut purus. Nunc sollicitudin, orci vulputate cursus iaculis, lacus lorem sodales 
+		lacus, non imperdiet mauris nulla eget metus. Nam mauris elit, consectetur ut mollis eu, fringilla vel 
+		leo. Fusce consectetur sodales diam, nec bibendum ipsum venenatis in. Nulla leo libero, lacinia ut sagittis 
+		id, ullamcorper ut dolor. Etiam vitae elit non mauris ornare luctus eget vel leo. Praesent sed nisl vel lacus
+		sollicitudin rutrum id quis lorem. Aenean suscipit, erat quis commodo scelerisque, orci magna dignissim tellus,
+		ut efficitur lacus nisl vel diam. Praesent ac nisl porttitor, finibus magna a, ullamcorper massa. Proin ac molestie 
+		eros. Quisque eros justo, vehicula vitae massa sed, dictum suscipit nulla. Praesent sapien leo, pretium 
+		ac sollicitudin ut, vestibulum nec mauris. Proin ultricies eros in pharetra cursus. Sed quis nisi eget 
+		mauris consectetur vehicula.
+		</div>
+	</div>
+	
+	<h2 class="header">Created by Will Johnke</h2>
+	
+	</body>
+
+
+</html>

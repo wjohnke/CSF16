@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To show you the different locations for Javascript and the syntax
+		for each of them. -->
+		
+<!-- References for intro to Javascript: 
+	
+		1) http://www.w3schools.com/js/default.asp
+		2) http://www.w3schools.com/js/js_intro.asp
+		
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Location</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	
+	
+		<script>
+			// Reference: http://www.w3schools.com/js/js_whereto.asp
+		
+			// JavaScript can be located in the <head>
+			console.log("Head: Hello!");
+            
+            //JavaScript can be displayed through the console and a window alert 
+            
+            window.alert("Head: Hello!"); 
+		</script>
+
+		<!-- ...or linked externally -->
+		<script src="app.js"></script>
+		
+	</head>
+	<body>
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+		    
+        <p id="demo"></p>
+	
+        <!-- The document.write() method should only be used for testing. -->
+        <button onclick="document.write('Hello From Button')">Try Document Write</button>
+	
+		<script>
+			// ...or in the <body>
+			console.log("Body: Hi!");
+		
+            window.alert("Body: Hello!"); 
+            
+            document.getElementById("demo").innerHTML = "Body: Hello"; 
+		</script>
+	</body>
+</html>

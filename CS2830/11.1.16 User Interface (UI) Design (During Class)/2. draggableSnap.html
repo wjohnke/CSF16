@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Created by Mr. Wergeles on October 31, 2016 -->
+<html>
+<head>
+	<title>jQuery UI: Draggable Snap</title>
+	<style>
+	.dragTiles {
+		height: 100px;
+		width: 100px;
+	}
+	#tile1 {
+		background-color: green;
+	}
+	#tile2 {
+		background-color: yellow;
+	}
+	#tile3 {
+		background-color: blue;
+	}
+	#tile4 {
+		background-color: red;
+	}
+	#tile5 {
+		background-color: orange;
+	}
+	#tile6 {
+		background-color: purple;
+	}
+	</style>
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script>
+		//same as document.ready in 1
+        $(function(){
+            
+            $(".dragTiles").draggable({
+                snap: true,
+                stack:".dragTiles"
+            });
+            
+        });
+        
+	</script>
+</head>
+<body>
+	<div id="tile1" class="dragTiles"></div>
+	<div id="tile2" class="dragTiles"></div>
+	<div id="tile3" class="dragTiles"></div>
+	<div id="tile4" class="dragTiles"></div>
+	<div id="tile5" class="dragTiles"></div>
+	<div id="tile6" class="dragTiles"></div>
+</body>
+</html>

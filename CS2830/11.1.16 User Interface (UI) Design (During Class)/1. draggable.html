@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Created by Mr. Wergeles on October 31, 2016 -->
+<html>
+<head>
+	<title>jQuery UI: Draggable</title>
+	<style>
+		#dragMe {
+			border: 2px solid green;
+			border-radius: 20px;
+			box-shadow: 0 0 5px green;
+			width: 500px;
+			padding: 10px;
+            
+		}
+		#dragMe h3 {
+			text-align: center;
+		}
+		#dragMe p {
+			text-indent: 20px;
+		}
+	</style>
+    
+    <script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    
+    <script>
+        $(document).ready(function(){
+            $("#dragMe").draggable();
+            
+            
+        });
+        
+    </script>
+    
+    
+</head>
+<body>
+	<div id="dragMe">
+		<h3>Lorem Ipsum</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat luctus urna quis sagittis. Sed dignissim, urna ut aliquam feugiat, sem purus vehicula nibh, sodales porttitor nunc lectus eu velit. Fusce id nunc arcu. Morbi est diam, dignissim id ornare ac, ultricies eu libero. Phasellus euismod lobortis neque eu tristique. Suspendisse tortor tellus, placerat sit amet mattis non, aliquet eu lacus. Maecenas ante mauris, pretium non condimentum non, molestie a est. Mauris congue adipiscing est in faucibus. Etiam a sapien mi, at aliquam enim. Pellentesque cursus consectetur dui eget luctus. Integer a elit at purus consectetur fermentum. Nam est turpis, vestibulum a fringilla id, viverra non arcu. Suspendisse facilisis vehicula condimentum.</p>
+	</div>
+</body>
+</html>

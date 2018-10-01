@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<th>School</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Gender</th>
+	</tr>
+	<?php
+		foreach ($this->users as $user) {
+			print "<tr>\n";
+			print "<td>{$user['school']}</td>\n";
+			print "<td>{$user['name']}</td>\n";
+			print "<td>{$user['age']}</td>\n";
+			print "<td>{$user['gender']}</td>\n";
+			print "</tr>\n";
+		}
+	?>
+</table>

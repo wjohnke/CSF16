@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To show you how to get data from checked boxes, how to deselect particular checkboxes, using ternary operators, and how to toggle all checkboxes with a for loop --> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Elements</title>
+        <script>
+            
+			function toggleCheck() {
+				var checkboxObject = document.getElementById("fishing");
+                /*
+                if (checkboxObject.checked == true) {
+                    checkboxObject.checked = false;
+                }
+                else {
+                    checkboxObject.checked = true;
+                }
+                */
+                
+                // This is an alternative to the if/else above; it's called a ternary operator:
+                (checkboxObject.checked) ? checkboxObject.checked = false : checkboxObject.checked = true;
+                
+			}
+		
+			function toggleAllCheck() {
+                var checkboxObjects = document.getElementsByName("interests[]");
+                
+                //console.dir(checkboxObjects); 
+                
+				for (var i = 0; i < checkboxObjects.length; i++) {
+                    (checkboxObjects[i].checked) ? checkboxObjects[i].checked = false : checkboxObjects[i].checked = true;
+                }
+			}
+            
+		</script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            
+            <!-- Checkboxes -->
+            <h3>What are your interests?</h3>
+            <div>
+                <input id="fishing" type="checkbox" name="interests[]" value="Fishing" checked>
+                <label for="fishing">Fishing</label>
+            </div>
+            <div>
+                <input id="sleeping" type="checkbox" name="interests[]" value="sleeping" checked>
+                <label for="sleeping">Sleeping</label>
+            </div>
+            <div>
+                <input id="studying" type="checkbox" name="interests[]" value="studying">
+                <label for="studying">Studying</label>
+            </div>
+            
+            <hr>
+		
+            <button type="button" onclick="toggleCheck()">Toggle Single Checkbox</button>
+            <button type="button" onclick="toggleAllCheck()">Toggle All Checkboxes</button>
+            
+        </form>
+    </body>
+</html>

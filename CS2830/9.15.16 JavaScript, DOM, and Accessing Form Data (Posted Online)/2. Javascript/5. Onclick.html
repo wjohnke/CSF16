@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To demonstrate the onclick event and show you the syntax for such an event. The onclick can be on buttons, images, divs, and many ohter elements. --> 
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/event_onclick.asp
+
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS3 Animations</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script>
+		
+			function handleClick() {
+				var box = document.getElementById("animateMe");
+				box.style.backgroundColor = "purple";
+				box.style.animationIterationCount = "infinite";
+			}
+		
+			function handleTime() {
+				var time = document.getElementById("time"); 
+				time.innerHTML = Date(); 
+			}
+		
+		</script>
+	
+		<style>
+			p#time {
+				border: 1px solid black; 
+			}
+		
+			div {
+				border: 5px solid black; 
+			}
+	
+		</style>
+	</head>
+	<body>
+		<div id="animateMe" onclick="handleClick()">
+			<p>Do a barrel roll!</p>
+		</div>
+	
+		<br>
+		<br>
+	
+		<p id="time" onclick="handleTime()">Excuse me, do you know the time?</p>
+	</body>
+</html>

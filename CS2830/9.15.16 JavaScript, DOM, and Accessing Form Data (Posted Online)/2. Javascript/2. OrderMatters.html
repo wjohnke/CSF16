@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main purpose: To show you different placements of the same javascript code and how the output will be different on the webpage. Therefore, order of javascript matters, which is similar to the importance of the order of css -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Order Matters</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script>
+		
+			// This will not work. The DOM has NOT loaded at this point.
+			var box = document.getElementById("animateMe");
+			box.style.backgroundColor = "green";
+		
+		</script>
+	</head>
+	<body>
+	
+		<script>
+		
+			// This will work. The DOM has loaded and #animateMe can be modified.
+			var box = document.getElementById("animateMe");
+			box.style.backgroundColor = "pink";
+		
+		
+			/*It is a good idea to place scirpts at the bottom of the <body> element. Order matters and the DOM needs to be loaded first before the javascipt will take effect. Placing JavaScript at the bottom can also improve page load, because script compilation can slow down the display. */
+		</script>
+	
+	
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+	
+	
+	</body>
+</html>

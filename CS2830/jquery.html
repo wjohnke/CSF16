@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery</title>
+                <!--Import jquery if downloaded--> 
+        <script src="jslibs/jquery-2.1.4.min.js"></script> 
+
+        <!--Or import directly from google or microsoft
+            Advantage: If user has already loaded jquery from 
+            other site, it will already be in cache, site will load faster
+
+        <script src="webaddress"></script>
+        -->
+
+        <script>
+            console.dir(jQuery);
+            
+            //$=JQuery
+            //$()
+            console.dir($);
+            
+            //Making variable for jquery
+            var jq=$;
+            console.dir(jq);
+            
+            //free up jquery variable, usually for more than one js library
+            $.noConflict();
+            
+            
+            /*attr doesn't work with checked, use prop instead
+            
+            prop("checked",true)*/
+            
+            //.each-short syntax for a for loop
+            //reference array of input with "input[name=dinosaurs]"
+            /*$(this)->can use with .each, refers to local variable in loop
+                    -this - the DOM object
+                    -$(this)- the jQuery object
+            */
+            
+            //.click & .fadeOut will fade out numbered list and move all other
+            //items up
+            
+            /*use for css
+            $("#owof").css("border","solid black 2px");
+            
+            multiple:
+                $("#header")
+                    .css("background color", "red")
+                    .css("border","dsfa"); semicolon at end
+            
+            Use javascript object
+                $("#header).css({
+                    backgroundColor:"brown",
+                    margin:2px
+                });
+                //no semicolon, only commas
+                
+                
+                
+            To get a value, only need to put in value you want to get
+            To set a value, need two values, object and value to set to
+            */
+            
+            
+        </script>
+        
+        
+        
+    </head>
+    <body>
+    
+    </body>
+
+</html>

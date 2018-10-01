@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!-- This document was created by Nick on August 30th, 2016 for CS2830_F16 -->
+
+<!-- The main purpose is to show you the CSS box model and calculate the physical width of an element -->
+
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>CSS Box Model</title>
+        <!--
+          References
+            http://www.w3schools.com/css/css_boxmodel.asp
+            http://guyroutledge.github.io/box-model/
+        -->
+        <style>
+            /*
+                Content width = 250px
+                
+                Physical width =
+                      250px content width
+                    + 100px of padding on left
+                    +  20px of border (10px from the left and 10px from the right)
+                    + 100px of margin (50px from the left and 50px from the right)
+                    -------
+                    = 470px
+            */
+            #boxModel {
+                border: 10px solid powderblue;
+                width: 250px;
+                margin: 50px;
+                padding: 100px;
+                padding-right: 0; /* Note: put padding-right on top of padding and it won't work, 
+                					this means ORDER DOES MATTER */
+                
+                /* Note: background color includes the content and the padding */ 
+                background-color: orange; 
+                text-align: center;  
+                
+                
+                /* open up the developer tools in chrome to see the box model available in chrome */ 
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="boxModel">CSS Box Model</div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+.data{
+    margin:1em 0;
+    
+}
+
+#welcomeBtn{
+    margin:auto;
+    font-family:Arial;
+    font-size:40px;
+    border-radius: 10px;
+}
+#body{
+    background-color: grey;
+    width:500px;
+    height:500px;
+    border:2px solid black;
+    border-radius: 20px;
+    margin:10px auto;
+}
+
+#pictureContainer{
+    font-family: Arial;
+    width:1000px;
+    height:auto;
+    
+    margin:20px, auto;
+    border:2px solid blue;
+    border-radius:3px;
+    box-shadow: 0px 10px 10px #888888;
+}
+
+#video{
+    background-color: darkblue;
+    height:500px;
+    padding:20px;
+    margin:10px auto;
+}
+
+#doc{
+    background-image: url(bridge.jpg);
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#photoViewer{
+    height:500px;
+    margin:0px auto;
+    padding:10px;
+}
+
+.photo{
+    box-shadow: 0px 10px 10px #FFFFFF;
+    float:left;
+    margin: 7,px;
+}

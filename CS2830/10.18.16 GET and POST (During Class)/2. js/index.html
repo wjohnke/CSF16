@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on October 17, 2016 --> 
+<html>
+<head>
+    <title>JavaScript Submit</title>
+    <script>
+			//var schoolId="mu";
+			
+			var schoolId="muA&M";
+			function doSubmit(){
+				var formObj=document.getElementById("myForm");
+				formObj.action="process.php?sid=" +encodeURIComponent(schoolId);
+				formObj.submit();
+			}
+        
+    </script>
+</head>
+<body>
+	<form id="myForm" method="POST">
+		<input type="text" name="myText">
+	</form>
+	<button type="button" onclick="doSubmit()">Submit via JavaScript</button>
+</body>
+</html>

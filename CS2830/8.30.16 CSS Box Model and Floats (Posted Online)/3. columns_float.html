@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on August 30, 2016 -->
+
+<!-- It's main purpose is to show you CSS skills by using float and clear properties to put two div's side by side --> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Columns Float</title>
+        <style>
+            /*  Note: 
+                The float property specifies whether or not an element should float.
+
+                The clear property is used to control the behavior of floating elements.
+            
+                In its simplest use, the float property can be used to wrap text around images or to have two div's float next to each other. 
+            
+                References: http://www.w3schools.com/css/css_float.asp
+            */
+            
+            /* Left Physical Width =
+                200px content width
+                + 4px of border
+                -------
+                = 204px
+            */
+            #left {
+                /* you could also use float: right; */
+                float: left;
+                width: 200px;
+                min-height: 250px;
+                border: 2px solid pink;
+            }
+            
+            /* Middle and Right Physical Width =
+                300px content width
+                + 4px of border
+                -------
+                = 304px
+            */
+            #middle, #right {
+                float: left;
+                width: 300px;
+                min-height: 250px;
+                border: 2px solid purple;
+            }
+            
+            /* Total Physical Width = 
+                204px -> first div
+                304px -> second div
+              + 304px -> third div
+              --------
+                812px
+            */
+            #columns {
+                /* 508px with two divs */
+                /* 812px with all three */
+                width: 812px;
+                border: 5px solid powderblue;
+            }
+               
+            /* Note: This is one way to clear the floats, but not best practice. */
+            .clear {
+                clear: both;
+            }
+            
+            /* CSS Clear Hack: apply this to the containing element.
+				http://css-tricks.com/snippets/css/clear-fix/
+			*/
+            .group:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+            <div id="right">Right</div>
+            
+            <!-- Below are two ways to clear float -->
+            <!--<div class="clear"></div> 
+            <!--<br class="clear">-->
+        </div>
+    </body>
+</html>

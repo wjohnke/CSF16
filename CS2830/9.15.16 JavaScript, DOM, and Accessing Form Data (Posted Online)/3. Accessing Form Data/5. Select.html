@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To show you how get data from a drop down menu, show you how to use inner HTML property, and how to set the selection from dropdown using Javascript -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_html_innerhtml.asp
+        2) http://www.w3schools.com/jsref/prop_select_selectedindex.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Elements</title>
+        <script>
+            
+			function getSelect() {
+				var selectObject = document.getElementById("foods");
+				
+				// Let's see what the <select> DOM object looks like:
+				console.dir(selectObject);
+				
+				// We can print out the index of what's selected and it's value
+				console.log('Selected: ' + selectObject.selectedIndex + ' ' + selectObject.value);
+				// We can also grab text directly from the <option> tags
+                console.log(selectObject.options[selectObject.selectedIndex].innerHTML);
+			}
+			
+			function setSelect() {
+				var selectObject = document.getElementById("foods");
+				selectObject.selectedIndex = 0;
+			}
+            
+		</script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            
+            <!-- Select -->
+            <h3>What do you like to eat?</h3>
+            <select id="foods" name="foods">
+                <option value="pizza">Pizza</option>
+                <option value="padthai">Pad Thai</option>
+                <option value="pannenkoeken">Pannenkoeken</option>
+                <option value="avocado">Avocado</option>
+                <option value="chili" selected>Chili</option>
+            </select>
+           
+            <hr>
+		
+            <button type="button" onclick="getSelect()">Get Select</button>
+            <button type="button" onclick="setSelect()">Set Select</button>
+        </form>
+    </body>
+</html>

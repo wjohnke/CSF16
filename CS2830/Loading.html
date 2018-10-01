@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery loading</title>
+        
+        <script src="jslibs/jquery-2.1.4.min.js"></script>
+        <script>
+            function pageLoaded(){
+                console.log("body:onload event");
+                
+                var message=document.getElementById("message");
+                message.innerHTML="The DOM has loaded";
+                
+            }
+            
+            //to just wait for the DOM we can use jQuery's library called
+            //.ready() function
+            
+            //JQuery function
+            //loaded before pageLoaded() function
+            $(document).ready(function(){
+                console.log("jQuery: The DOM is ready");            
+            
+                var message=$("message");
+                
+                message.html("jQuery changed this");
+            });
+        
+        </script>
+        
+    </head>
+    <body onload="pageLoaded()">
+        <p id="message">Default</p>
+    
+    
+    </body>
+
+</html>

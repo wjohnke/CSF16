@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Wmjxb2Stopwatch.jnlp">
+  <information>
+    <title>Wmjxb2Stopwatch</title>
+    <vendor>wjohn_000</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Wmjxb2Stopwatch.jar" size="22409" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Wmjxb2Stopwatch" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="wmjxb2stopwatch.Wmjxb2Stopwatch"  name="Wmjxb2Stopwatch" />
+  <update check="always"/>
+</jnlp>

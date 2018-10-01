@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery AJAX Example: Eistein Quotes</title>
+	
+	<link rel="stylesheet" type="text/css" href="index.css">
+	
+    <script src="../jquery-1.11.2.min.js"></script>
+	
+	<script>
+
+	function updateInfo(quoteID) {
+        //get key value, using update info page pass in quoteID, data returned back from function
+		$.get("updateInfo.php", {"infoId":quoteID}, function(data){
+			$("#infoBox").html(data);
+		
+		});
+        
+        
+        
+        /*
+		var xmlHttp = new XMLHttpRequest();
+		
+		xmlHttp.onload = function() {
+			if (xmlHttp.status == 200) {
+				elemObj = document.getElementById('infoBox');
+				elemObj.innerHTML = xmlHttp.responseText;
+			  }
+		}
+		
+		xmlHttp.open("GET", "updateInfo.php?infoId=" + quoteID, true);
+		xmlHttp.send();
+        */
+	}
+	
+	</script>
+</head>
+<body>
+	<h1>Einstein Quotes</h1>
+	
+	<input type="button" value="Quote 1" onclick="updateInfo('quote1')">
+	<input type="button" value="Quote 2" onclick="updateInfo('quote2')">
+	<input type="button" value="Quote 3" onclick="updateInfo('quote3')">
+	<input type="button" value="Quote 4" onclick="updateInfo('quote4')">
+	<input type="button" value="Quote 5" onclick="updateInfo('quote5')">
+	
+	<div id="infoBox">Click one of the buttons above to get an Einstein quote.</div>
+</body>
+</html>

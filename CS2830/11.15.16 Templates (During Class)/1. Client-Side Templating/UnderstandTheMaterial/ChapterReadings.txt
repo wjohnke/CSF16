@@ -1,0 +1,5 @@
+References: 
+
+1) http://www.w3schools.com/js/js_function_closures.asp
+2) http://conceptf1.blogspot.com/2013/11/javascript-closures.html
+

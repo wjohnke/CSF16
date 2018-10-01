@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+
+<!-- This was created by Nick on August 30, 2016
+
+        The main purpose is to show you the diffecnes between 
+        HTML block elements and HTML inline elements --> 
+
+
+<!-- Note: Every HTML element has a default display value depending on what type of element it is. 
+			The default display value for most elements is block or inline.
+
+Reference:
+
+*******  http://www.w3schools.com/html/html_blocks.asp  *******
+
+-->
+<html> 
+
+	<head> 
+		<meta charset="UTF-8"> 
+		<title>HTML Block VS Inline</title> 
+		
+		
+		<style> 
+			h1 { text-align: center;
+				 border:2px black solid;  
+            } 
+			h2 {
+				text-decoration: line-through; 
+				text-align: right; 
+			}
+			p { background-color: aqua;
+				font-family: "Comic Sans MS"; 
+            }
+            div {
+                border: 5px solid blue; 
+                /*width: 500px; */
+            }
+            span {
+                border: 1px solid orange; 
+            }
+            img {
+                width: 200px; 
+            }
+		</style>
+	</head> 
+	<body>
+        <!-- Note: 
+			Block Element Characteristics: 
+				* ALWAYS start on (and end with) a new line 
+                * Take up the full width available
+                    * Their width is 100% of their parent container
+                    * They stretch out to the left and right as far as possible
+
+            The <div>,<h1> - <h6>, <p>, and <form> elements are a block elements.
+		-->
+        <div>
+            <h1>My First Header</h1> 
+        </div>
+        
+		<h2>My second header</h2> 
+		
+		<p>Hello World!</p>
+		<p>Paragraph #2</p> 
+		
+		<p>Third Paragraph -> this is a lot of text that we are trying to split on two separate lines, we are going to <br> 
+		see if I simply add a new line or press enter, if that will separate this string on two lines in the browser. <br>
+		The answer is no, you need a break to put text on two separate lines</p> 
+		
+		<pre>Third Paragraph -> this is a lot of text that we are trying to split on two separate lines, we are going to  
+		see if I simply add a new line or press enter, if that will separate this string on two lines in the browser. 
+		The answer is no, you need a break to put text on two separate lines</pre> 
+        
+       
+        <!-- Note: 
+        If we put inline element inside a block element, then it will start on new line and end with new line. 
+        	The div (block element) will take up the entire width but the span (inline element) will only take 
+        	up the width that is needed. And the reason it starts/ends with new line is because of the outside
+        	block element. 
+        -->
+        <div><span>This is the last example</span></div>
+        
+        <!-- Note: 
+            Inline Element Characteristics: 
+				* Does NOT start on a new line
+                    * They are displayed one next to another
+                * Only takes up as much width as necessary
+                    * Their width is based on their content
+
+            The <span>, <a>, <img> elements are inline elements. 
+        -->
+        
+        <span>Web development is a broad term for the work involved in developing a web site for 
+        the Internet (World Wide Web) or an intranet (a private network). Web development can range
+         from developing the simplest static single page of plain text to the most complex 
+         web-based internet applications, electronic businesses, and social network services. 
+         A more comprehensive list of tasks to which web development commonly refers, 
+         may include web engineering, web design, web content development, client liaison, 
+         client-side/server-side scripting, web server and network security configuration, 
+         and e-commerce development. Among web professionals, "web development" usually refers 
+         to the main non-design aspects of building web sites: writing markup and coding. 
+         Most recently Web development has come to mean the creation of content management 
+         systems or CMS. These CMS can be made from scratch, proprietary or open source. 
+         In broad terms the CMS acts as middleware between the database and the user through 
+         the browser. A principle benefit of a CMS is that it allows non-technical people 
+         to make changes to their web site without having technical knowledge.</span>
+        <span>Second Span</span>
+        <span>Third Span</span>
+        <span>Forth Span</span>
+        
+        <!-- Put a block element inbetween inline elements to see what happens --> 
+        <p>This paragraph is inbetween the inline elements</p>
+        
+        <a href="http://google.com">This is first link</a>
+        <img src="shanghai.jpg" alt="shanghai">
+	</body> 
+</html> 

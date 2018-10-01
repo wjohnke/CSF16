@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<!--
+Will Johnke
+ID:14253530
+November 3rd, 2016
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Challenge 9</title>
+	
+		<script src="jquery-1.11.2.min.js"></script>
+	
+		<script>
+			function getXML(){
+				$("#contentBox").html("Loading...");
+				
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.onload = function() {
+					if (xmlHttp.status == 200) {
+						var xmlDoc=xmlHttp.responseXML;				
+						var output='';
+						dinosaur=xmlDoc.getElementsByTagName("dinosaur");
+						for(var i=0;i<dinosaur.length; i++){
+							output+="<li>"+dinosaur[i].children[0].innerHTML+" lived during "+
+							dinosaur[i].children[3].innerHTML+" period.</li>";
+						}
+						var divObj=document.getElementById('contentBox');
+						divObj.innerHTML=output;
+						
+					}
+				}
+		
+				xmlHttp.open("GET", "http://ec2-54-226-50-144.compute-1.amazonaws.com/Challenge9/webService.php?content=data&format=xml", true);
+				xmlHttp.send();	
+			}
+			
+			function getJSON(){
+				$("#contentBox").html("Loading...");
+				
+				var options;
+				options={
+					"content":"data",
+					"format":"json"
+				}
+				
+				$.getJSON("http://ec2-54-226-50-144.compute-1.amazonaws.com/Challenge9/webService.php", options, function(data){
+					var i;
+					var output='';
+					for(i in data){
+						output+="<li>"+data[i].name+" was a "+data[i].diet+"</li>";
+					}
+					$("#contentBox").html(output);
+				});
+			
+			}
+			function home(){
+				$("#contentBox").html("Loading...");
+				
+				$.get("http://ec2-54-226-50-144.compute-1.amazonaws.com/Challenge9/webService.php?content=home", function(data){
+					$("#contentBox").html(data);
+				});
+			}
+		
+		</script>
+		
+		<style>
+			#contentWrapper{
+				background-color:powderblue;
+				border:2px solid black;
+				border-radius:5px;
+				width:500px;
+				margin:10px auto;
+				text-align:center;
+				
+			}
+			h1{
+				border-bottom:2px solid black;
+			}
+			
+			.button{
+				background-color:grey;
+				border:1px solid grey;
+				border-radius: 10px;
+				width:100px;
+				height:25px;
+				float:left;
+				margin:20px;
+			}
+			
+			.group:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		</style>
+	
+	</head>
+	
+	<body>
+		<div id="contentWrapper">
+			<h1>Dinosaur Web Application</h1>
+			<div class="group">
+			<div class="button"><button type="button" onclick="home()">Home</button></div>
+			<div class="button"><button type="button" onclick="getJSON()">JSON Dinos</button></div>
+			<div class="button"><button type="button" onclick="getXML()">XML Dinos</button></div>
+			</div>
+			<ul id="contentBox"></ul>
+		</div>
+	</body>
+
+
+
+</html>

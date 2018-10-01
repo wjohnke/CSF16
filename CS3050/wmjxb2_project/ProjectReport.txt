@@ -1,0 +1,12 @@
+I was the only one who worked on this project.
+
+I chose to view the grid and the path from the robot to the goal as a triangle with a hypotenuse as the
+quickest path. If the robot could move diagonally in the direction towards the goal, it would, otherwise (if
+there was an obstacle in the way) it would choose to wait, rather than moving again. Because you know the coordinates
+of all the robots and obstacles and finish spots, I based my decision on basic math, checking if it was worth it to move or not,
+and then proceeding when safe, in the direction that most makes sense. 
+I didn't use Kruskals or any graph algorithm because I assumed you could only move one square at a time, and were limited in that
+there weren't any secret paths that might take you to the goal faster; it was much more straightforward. I'd calculate the complexity
+of the algorithm as worst case O(2n) or just O(n), n being the size of the grid, if the obstacle was constantly moving at the
+same rate as the robot, always blocking it from moving diagonally, making it take the longest route possible, the entire length of
+grid vertically, and then the entire length of the grid horizontally.

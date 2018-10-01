@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wmjxb2stopwatchfxml.StopWatchFXMLController">
+    <children>
+      <StackPane prefHeight="271.0" prefWidth="306.0">
+         <children>
+            <ImageView fx:id="clockView" fitHeight="275.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@clockface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="handView" fitHeight="278.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <Button fx:id="resetButton" layoutX="324.0" layoutY="147.0" mnemonicParsing="false" onAction="#reset" prefHeight="31.0" prefWidth="65.0" text="Reset" />
+      <Button fx:id="stopButton" layoutX="324.0" layoutY="94.0" mnemonicParsing="false" onAction="#stop" prefHeight="31.0" prefWidth="65.0" text="Stop" />
+      <Button fx:id="startButton" layoutX="324.0" layoutY="41.0" mnemonicParsing="false" onAction="#start" prefHeight="31.0" prefWidth="65.0" text="Start" />
+      <Label fx:id="digital" layoutX="145.0" layoutY="305.0" prefHeight="31.0" prefWidth="85.0" text="0:0.0" textAlignment="CENTER" textFill="#14f208">
+         <font>
+            <Font name="MS Gothic" size="32.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To show you the onload event and to show you the difference between function declarations and function expressions -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/event_onload.asp
+        2) http://www.w3schools.com/js/js_function_definition.asp
+
+        3) https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
+        4) http://markdaggett.com/blog/2013/02/15/functions-explained/
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript onload</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script>
+		
+			// We can define a function like below. This is called a function declaration:
+			function pageLoaded() {
+				var box = document.getElementById("animateMe");
+				box.style.backgroundColor = "green";
+			}
+		
+		
+			// Or functions can be treated like variables. This is called a function expression:
+			var pageLoaded = function(x) {
+				var box = document.getElementById("animateMe");
+				box.style.backgroundColor = x;
+			};
+		
+			/* After a function expression has been stored in a variable, the variable can be used as a function. */
+		
+			// The function above ends with a semicolon because it is a part of an executable statement. 
+		
+		
+		
+		
+			// Both functions are the same. Also, note that a function without a name (like the one assigned to 'pageLoaded' in the function expression above) is called an anonymous function. 
+		
+			//Functions stored in variables do not need function names. They are always invoked (called) using the variable name. 
+	
+			// In JavaScript, functions are first-class citizens. That means you can store them in variables, pass them into other functions as arguments, organize them into arrays, store them in objects, etc.
+			// Here I pass 'pageLoaded' to a new var called 'pageReallyDidLoad'
+			var pageReallyDidLoad = pageLoaded;
+	  
+		</script>
+	</head>
+	<body onload="pageReallyDidLoad('red')">
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+</body>
+</html>

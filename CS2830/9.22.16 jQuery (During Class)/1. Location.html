@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on Septebmer 21, 2016 -->
+
+<!-- Main Purpose: To show the diffent locations the jQuery library can be called. 
+		And the different ways to call the library. -->
+		
+<!-- References: 
+		1) http://www.w3schools.com/jquery/default.asp
+		2) http://www.w3schools.com/jquery/jquery_get_started.asp
+		3) http://www.w3schools.com/jquery/jquery_syntax.asp	
+		4) http://jquery.com/
+		5) http://api.jquery.com/jQuery.noConflict/
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Location</title>
+        
+        <script src="jslibs/jquery-2.1.4.min.js"></script>
+        
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+        
+        <script>
+            console.dir(jQuery); 
+            
+            //jQuery(...)
+            
+            // $ = jQuery 
+            // $()
+            
+            console.dir($); 
+            
+            // making your own alias 
+            var jq = $; 
+            
+            console.dir(jq); 
+            
+            // typically done when youre using more than one JavaScript library 
+            $.noConflict(); 
+            
+            console.dir($); 
+
+            var $ = jQuery; 
+            
+            console.dir($); 
+        
+        </script>
+        
+        
+        
+	</head>
+	<body>
+	</body>
+</html>

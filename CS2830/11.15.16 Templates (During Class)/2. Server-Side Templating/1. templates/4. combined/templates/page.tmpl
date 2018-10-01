@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><?php print $this->title; ?></title>
+<?php
+foreach ($this->css as $css) {
+?>
+<link rel="stylesheet" href="<?php print $css; ?>" type="text/css">
+<?php
+}
+?>
+</head>
+<body>
+<?php
+foreach ($this->html as $html) {
+print $html;
+}
+?>
+</body>
+</html>

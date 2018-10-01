@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- This document was created by Nick on September 14, 2016 -->
+
+<!-- Main Purpose: To show you the scope and the difference between local and global variables. Scope refers to the set of variables, objects, and functions you have access to. -->
+
+
+<!-- References: 
+        1) http://www.w3schools.com/js/js_scope.asp
+
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Scope/title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script> 
+			/*
+				JavaScript has function-level scope
+			
+				 Any var declared in a function is local to that function.
+				 Any var declared outside a function is in the global namespace.
+			*/
+		
+			// "me" is a global variable
+			var me = "Mr. Wergeles";
+		
+			// It is in scope here
+			console.log("first log: " + me);
+		
+			function pageLoaded() {
+				var box = document.getElementById("animateMe");
+				box.style.backgroundColor = "green";
+			
+				// "me" is in scope here too
+				console.log("second log:" + me);
+			
+				// "box" was defined within this function though...
+			}
+			
+			console.dir("fourth log: " + me); 
+		
+			// So, it's not in scope here
+			console.dir("third log: " + box);
+		</script>
+	</head>
+	<body onload="pageLoaded()">
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+		
+		<script>
+			// And global variables can also be accessed in other <script> blocks.
+			console.log("fifth log in Body: " + me);
+		</script>
+		
+	</body>
+</html>

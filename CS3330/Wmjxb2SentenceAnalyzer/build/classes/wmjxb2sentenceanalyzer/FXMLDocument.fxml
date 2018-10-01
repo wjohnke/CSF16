@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wmjxb2sentenceanalyzer.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="82.0" layoutY="89.0" onAction="#analyze" text="Analyze Sample Word" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button layoutX="128.0" layoutY="32.0" mnemonicParsing="false" onAction="#about" text="About" />
+      <TextArea fx:id="newText" layoutX="60.0" layoutY="141.0" prefHeight="39.0" prefWidth="200.0" promptText="Enter own word" />
+    </children>
+</AnchorPane>

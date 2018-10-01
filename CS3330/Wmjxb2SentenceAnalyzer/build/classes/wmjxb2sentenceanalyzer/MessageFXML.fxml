@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wmjxb2sentenceanalyzer.MessageFXMLController">
+   <children>
+      <Label fx:id="label" layoutX="55.0" layoutY="14.0" text="Definition:" />
+      <Button layoutX="268.0" layoutY="325.0" mnemonicParsing="false" onAction="#tryNewWord" text="Go back" />
+      <TextArea fx:id="text" layoutX="55.0" layoutY="57.0" prefHeight="200.0" prefWidth="484.0" />
+   </children>
+</AnchorPane>

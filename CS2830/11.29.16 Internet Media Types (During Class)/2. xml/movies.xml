@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<movies>
+    <movie>
+        <title>Gone with the Wind</title>
+        <year>1939</year>
+    </movie>
+    <movie>
+        <title>2001: A Space Odyssey</title>
+        <year>1968</year>
+    </movie>
+    <movie>
+        <title>Jurassic Park</title>
+        <year>1993</year>
+    </movie>
+    <movie>
+        <title>The Shawshank Redemption</title>
+        <year>1994</year>
+    </movie>
+    <movie>
+        <title>Balto</title>
+        <year>1995</year>
+    </movie>
+    <movie>
+        <title>Mulan</title>
+        <year>1998</year>
+    </movie>
+    <movie>
+        <title>The Matrix</title>
+        <year>1999</year>
+    </movie>
+    <test>
+    	<nick>This is to show you that XML does not use pre-defined tags</nick>
+    </test>
+</movies>

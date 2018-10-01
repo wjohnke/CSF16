@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery AJAX Intro</title>
+    
+    <script src="../jquery-1.11.2.min.js"></script>
+	
+	
+	<script>
+        
+        /* Reference: 
+        	1) http://api.jquery.com/category/ajax/
+        	2) http://api.jquery.com/jQuery.get/
+        */
+        
+		function getContent() {
+            //while waiting for response, set to loading
+            $("#contentBox").html("Loading...");
+			//when response comes back, data comes back returned from function
+			$.get("responder.php", function(data){
+				$("#contentBox").html(data);
+			
+			});
+			
+			
+            
+            
+            /*
+            // First we need to create an XMLHttpRequest object
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_create.asp
+            var xmlHttp = new XMLHttpRequest();
+            
+            // Then we need to set up what will happen when we get a response from the server
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp
+            xmlHttp.onreadystatechange = function() {
+                // If the readyState is 4 and the status is 200, the response is ready
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    
+                    // Now we can do something with that response
+                    // http://www.w3schools.com/ajax/ajax_xmlhttprequest_response.asp
+                    
+                    // Get Response Text
+					var response = xmlHttp.responseText;
+					
+					// Get p object
+					var contentBox = document.getElementById("contentBox");
+					
+					// Set #contentBox's innerHTML
+					contentBox.innerHTML = response;
+                
+                }
+            };
+            
+            // We added this to show "Loading" in #contentBox before receiving our response
+			document.getElementById('contentBox').innerHTML = "Loading...";
+            
+            // Specify the type of request (GET/POST) and where it's going
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+            xmlHttp.open("GET", "responder.php", true);
+            
+            // Send the AJAX request
+            xmlHttp.send();
+            */
+			
+			
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>Content</h1>
+	<p id="contentBox"></p>
+	<button type="button" onclick="getContent()">Get Content</button>
+</body>
+</html>

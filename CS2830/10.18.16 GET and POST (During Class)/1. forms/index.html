@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- This file was created by Nick on October 17, 2016 -->
+<html>
+	<head>
+		<title>Form Elements</title>
+		<style>
+			body {
+				margin-bottom: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Reference: http://www.w3schools.com/html/html_forms.asp -->
+		<form action="process.php" method="POST">
+		
+			<!-- Text Input -->
+			<div>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" placeholder="Username">
+			</div>
+			
+			
+			<!-- Password Input -->
+			<div>
+				<label for="pass">Password</label>
+				<input type="password" id="pass" name="password" maxlength="10" required>
+			</div>
+			
+			
+			<!-- Radio Buttons -->
+			<h2>What is your favorite dinosaur?</h2>
+			<div>
+				<input type="radio" id="raptor" name="dinosaur" value="velociraptor">
+				<label for="raptor">Velociraptor</label>
+			</div>
+			<div>
+				<input type="radio" id="iguanodon" name="dinosaur" value="iguanodon" checked>
+				<label for="iguanodon">Iguanodon</label>
+			</div>
+			<div>
+				<input type="radio" id="trex" name="dinosaur" value="trex">
+				<label for="trex">T-Rex</label>
+			</div>
+			
+			
+			<!-- Checkboxes -->
+			<h2>What do you like to do?</h2>
+			<div>	
+				<input type="checkbox" id="coding" name="interests[]" value="coding">
+				<label for="coding">Coding</label>
+			</div>
+			<div>
+				<input type="checkbox" id="sleeping" name="interests[]" value="sleeping" checked>
+				<label for="sleeping">Sleeping</label>
+			</div>
+			<div>
+				<input type="checkbox" id="drums" name="interests[]" value="drums" checked>
+				<label for="drums">Drums and Percussion</label>
+			</div>
+			
+			<h2>What is your favorite thing to eat?</h2>
+			<select name="foods">
+				<option value="baozi">Baozi</option>
+				<option value="chicken">Chicken</option>
+				<option value="oatmealCreamPie">Oatmeal Cream Pies</option>
+				<option value="bananas">Bananas</option>
+			</select>
+			
+			<h2>What do you like to eat?</h2>
+			<select name="foods[]" multiple>
+				<option value="baozi">Baozi</option>
+				<option value="chicken">Chicken</option>
+				<option value="oatmealCreamPie">Oatmean Cream Pies</option>
+				<option value="bananas">Bananas</option>
+			</select>
+			
+			<h2>Comments?</h2>
+			<textarea name="comments">I like CS2830... but my instructor is kinda weird!</textarea>
+			
+			<div>
+				<input type="submit" value="Send">
+			</div>
+			
+		</form>
+	</body>
+</html>

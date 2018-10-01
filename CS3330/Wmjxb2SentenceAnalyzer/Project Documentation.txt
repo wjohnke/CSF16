@@ -1,0 +1,16 @@
+Will Johnke
+ID: 14253530
+CS3330 Final Project
+
+My project takes in a word or a sentence, looks up the definition of that word or sentence using the Oxford Dictionary
+API, and outputs it to the reader. Clicking on either the Sample button or the About button switches scenes between the input page
+and the page that delivers the message. In the future, I'd like to develop this app to actually analyze what each word means, and
+possibly extract a meaning from a sentence, maybe by slowly learning over time with more and more use.
+
+The two analyzers, word and sentence analyzers, implement the main interface, analyzer,
+which requires the classes to have functions to analyze and get the definition.
+
+The app loads data from the Oxford API using an InputStreamReader wrapped in a BufferedReader.
+It gets data back from the API in the form of a JSON, which, after some manipulating,
+the definition of the word or each word is extracted. The JSONObject class, I believe,
+extends the HashMap class in Java, using Collection class functions to extrapolate the data.
